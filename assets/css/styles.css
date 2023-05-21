@@ -1,0 +1,242 @@
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@500;800&display=swap');
+
+/* 
+    || Small devices
+*/
+
+@media screen and (max-width: 700px) {
+    body {
+        font-size: 0.9rem;
+    }
+
+    .notification__profile img {
+        width: 2.5rem;
+    }
+    
+    .notification__timestamp {
+        font-size: 0.9rem;
+    }
+
+    .notification__img {
+        height: 2.5rem;
+    }
+}
+
+/* 
+    || Large devices
+*/
+
+@media screen and (min-width: 701px) {
+    body {
+        font-size: 1rem;
+    }
+    
+    .main {
+        margin-top: 2rem;
+        border-radius: 15px;
+    }
+
+    .notification__timestamp {
+        font-size: 1rem;
+    }
+
+    .notification__img {
+        height: 3rem;
+    }
+
+    .notification__profile img {
+        width: 3rem;
+    }
+}
+
+/* 
+    || Global variables
+*/
+
+:root {
+    --notification-background: hsl(0, 0%, 100%);
+    --background: hsl(210, 60%, 98%);
+    --light-gray-blue-1: hsl(211, 68%, 94%);
+    --light-gray-blue-2: hsl(205, 33%, 90%);
+    --gray-blue: hsl(219, 14%, 63%);
+    --dark-gray-blue: hsl(219, 12%, 42%);
+    --dark-blue: hsl(224, 21%, 14%);
+    --red: hsl(1, 90%, 64%);
+    --blue: hsl(219, 85%, 26%);
+
+    --font-family: 'Plus Jakarta Sans', sans-serif;
+
+    --font-medium: 500;
+    --font-bold: 800;
+}
+
+/* 
+    || Global Styles
+*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: var(--font-family);
+    background-color: var(--background);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.main {
+    display: flex;
+    flex-direction: column;
+    gap: 0.8rem;
+    background-color: var(--notification-background);
+    padding: 2rem 1.5rem;
+    max-width: 700px;
+    box-shadow: 5px 5px 10px #EEE;
+}
+
+/* 
+    || Classes
+*/
+
+.unread {
+    background-color: var(--background);
+    box-shadow: 2px 2px 10px #EEE;
+}
+
+/* 
+    || Header Styles
+*/
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.header__left {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    color: var(--dark-blue);
+}
+
+.header__unread {
+    font-size: 1rem;
+    background-color: var(--blue);
+    border-radius: 7px;
+    padding: 1px 12px 4px 12px;
+    color: white;
+    font-weight: var(--font-bold);
+    margin-right: 1rem;
+}
+
+.header__mark-all {
+    color: var(--gray-blue);
+}
+
+.header__mark-all:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+/* 
+    || Notification Styles
+*/
+
+.notification {
+    display: flex;
+    border-radius: 10px;
+    align-items: center;
+    padding: 1rem;
+}
+
+.notification__profile {
+    align-self: flex-start;
+}
+
+.notification__profile img {
+    height: auto;
+    margin-right: 0.8rem;
+    cursor: pointer;
+}
+
+.notification__content {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.notification__description {
+    color: var(--dark-gray-blue);
+    width: 100%;
+}
+
+.notification__name {
+    font-weight: var(--font-bold);
+    color: black;
+    margin-right: 0.2rem;
+    color: var(--dark-blue);
+}
+
+.notification__name:hover {
+    cursor: pointer;
+    color: var(--blue);
+}
+
+.notification__post {
+    font-weight: var(--font-bold);
+    cursor: pointer;
+    margin-left: 0.2rem;
+}
+
+.notification__post:hover {
+    color: var(--blue);
+}
+
+.notification__group {
+    font-weight: var(--font-bold);
+    color: var(--blue);
+    cursor: pointer;
+    margin-left: 0.2rem;
+}
+
+.notification__unread {
+    border-radius: 50%;
+    background-color: var(--red);
+    min-width: 8px;
+    min-height: 8px;
+    margin-left: 0.3rem;
+    display: inline-block;
+}
+
+.notification__timestamp {
+    color: var(--gray-blue);
+    margin-top: 3px;
+}
+
+.notification__img {
+    cursor: pointer;
+    margin-left: 1rem;
+}
+
+.notification__comment {
+    border: 1px solid var(--light-gray-blue-1);
+    border-radius: 5px;
+    padding: 1rem;
+    color: var(--gray-blue);
+    margin-top: 1rem;
+    cursor: pointer;
+}
+
+.notification__comment:hover {
+    background-color: var(--light-gray-blue-1);
+}
